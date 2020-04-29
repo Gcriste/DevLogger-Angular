@@ -13,6 +13,7 @@ export class LogsComponent implements OnInit {
 
   logs: Log[];
 
+
   constructor(private logService : LogService) { }
 
   ngOnInit() {
