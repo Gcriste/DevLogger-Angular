@@ -19,11 +19,14 @@ export class LogService {
   private stateSource = new BehaviorSubject<boolean>(true);
   stateClear = this.stateSource.asObservable();
 
-  constructor() {   this.logs = [
-    {id:'1', text: 'hello', date: new Date('12/26/2019 12:45:34')},
-    {id:'2', text: 'added bootstrap', date: new Date('12/27/2019 10:15:24')},
-    {id:'3', text: 'added logs', date: new Date('12/28/2019 5:13:34')}
-  ] }
+  constructor() {   
+  //   this.logs = [
+  //   {id:'1', text: 'hello', date: new Date('12/26/2019 12:45:34')},
+  //   {id:'2', text: 'added bootstrap', date: new Date('12/27/2019 10:15:24')},
+  //   {id:'3', text: 'added logs', date: new Date('12/28/2019 5:13:34')}
+  // ] 
+  this.logs = [];
+}
 
 getLogs(): Observable<Log[]>{
   return of(this.logs)
