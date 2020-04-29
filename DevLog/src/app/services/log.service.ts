@@ -15,6 +15,9 @@ export class LogService {
   private logSource = new BehaviorSubject<Log>({id: null, text: null, date: null});
   selectedLog = this.logSource.asObservable();
 
+  
+  private stateSource = new BehaviorSubject<boolean>(true);
+  stateClear = this.stateSource.asObservable();
 
   constructor() {   this.logs = [
     {id:'1', text: 'hello', date: new Date('12/26/2019 12:45:34')},
@@ -51,6 +54,12 @@ deleteLog(log: Log){
     }
   });
 }
+
+clearState() {
+  this.stateSource.next(true);
+}
+
+
 }
 
 
