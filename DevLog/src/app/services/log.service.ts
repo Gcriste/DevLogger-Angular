@@ -48,7 +48,7 @@ setFormLog(log: Log) {
 addLog(log: Log) {
   this.logs.unshift(log);
 
-  // Add to local storage 
+  // Added to local storage 
   localStorage.setItem('logs', JSON.stringify(this.logs));
 }
 
@@ -79,8 +79,6 @@ deleteLog(log: Log){
 clearState() {
   this.stateSource.next(true);
 }
-
-
 }
 
 
